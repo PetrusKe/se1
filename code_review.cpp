@@ -33,6 +33,11 @@ int  main(){
 				std::cout << "Player 2: ";
 			std::cout << "Which cell to mark? i:[1..3], j:[1..3]: "; 
 			std::cin >> i >> j;
+
+            while game[i][j] != ' ':
+                std::cout << "Please re-input i and j";
+                std::cin >> i >> j;
+            
 			if (turn == false)
 			   game[i][j] = 'X';
 			else 
